@@ -1,0 +1,55 @@
+<form [formGroup]="UserForm" (ngSubmit)="ajouter()">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <label> Nom </label>
+        <input type="text" formControlName="nom" class="form-control" />
+      </div>
+      <div class="row">
+        <label> Prénom </label>
+        <input type="text" formControlName="prenom" class="form-control" />
+      </div>
+      <div class="row">
+        <label> Email </label>
+        <input type="email" formControlName="email" class="form-control" />
+      </div>
+      <div class="row">
+        <label> Password </label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+        />
+      </div>
+      <div class="row">
+        <label> Date_naissance </label>
+        <input type="date" formControlName="date_nais" class="form-control" />
+      </div>
+      <div class="row">
+        <label> Téléphone </label>
+        <input type="text" formControlName="telephone" class="form-control" />
+      </div>
+      <div class="row">
+        <label> Grade </label>
+        <input
+          type="radio"
+          name="grade"
+          formControlName="grade"
+          value="Client"
+        />
+        Client
+        <input
+          type="radio"
+          name="grade"
+          formControlName="grade"
+          value="Vendeur"
+        />
+        Vendeur
+      </div>
+      <div class="row">
+        <input type="submit" value="Ajouter" class="btn btn-primary" />
+        <input type="reset" value="Annuler" class="btn btn-warning" />
+      </div>
+    </div>
+  </div>
+</form>
